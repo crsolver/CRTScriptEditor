@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctkvh1lh7autt"]
+
+[ext_resource type="Shader" path="res://addons/crt_script_editor/crt.gdshader" id="1_xdohb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6uh0e"]
+shader = ExtResource("1_xdohb")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.035
+shader_parameter/scanlines_width = 0.14
+shader_parameter/grille_opacity = 0.0
+shader_parameter/resolution = Vector2(1280, 720)
+shader_parameter/pixelate = false
+shader_parameter/roll = true
+shader_parameter/roll_speed = 2.66
+shader_parameter/roll_size = 27.375
+shader_parameter/roll_variation = 2.275
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.049
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.00400005
+shader_parameter/brightness = 2.155
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.25
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.755
+shader_parameter/vignette_opacity = 0.4
+
+[node name="CRTOverlay" type="ColorRect"]
+material = SubResource("ShaderMaterial_6uh0e")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
